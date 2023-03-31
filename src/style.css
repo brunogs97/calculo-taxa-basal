@@ -58,12 +58,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 740px;
-    margin: 4em auto;
+    width: 1100px;
+    margin: 3em auto;
 }
 
 form {
-    font-size: 15px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
 }
@@ -81,6 +81,7 @@ form {
     padding: .5em;
     border-radius: 3px;
     width: 130px;
+    font-size: 16px;
 }
 
 .cx-dados {
@@ -90,6 +91,7 @@ form {
     background-color: var(--bg-cx-informacao);
     padding: 2em;
     width: 40%;
+    height: 350px;
     margin-left: 1em;
 }
 
@@ -98,10 +100,11 @@ select {
     background-color: var(--bg-pagina);
     padding: .2em;
     border-radius: 3px;
+    font-size: 16px;
 }
 
 .botoes {
-    margin: 0 auto;
+    margin: 1.3em auto 0 auto;
 }
 
 .botoes button {
@@ -122,10 +125,15 @@ select {
     color: var(--bg-cx-informacao);
 }
 
+#resultado {
+    display: none;
+}
+
 #resultado h2 {
     text-align: center;
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 1em;
 }
 
 #resultado h3 {
@@ -133,7 +141,7 @@ select {
 }
 
 #resultado ul li {
-    margin: .5em 0;
+    margin: .8em 0;
 }
 
 #resultado ul li .guia-informacao {
@@ -143,6 +151,16 @@ select {
 
 .valores-resultado {
     margin: 0 .5em;
+    font-weight: 400;
+}
+
+small {
+    font-size: 14px;
+    color: var(--roxo);
+}
+
+.fa-arrow-right {
+    color: var(--verde-escuro);
 }
 
 footer {
@@ -152,11 +170,11 @@ footer {
 footer h3 {
     font-size: 24px;
     font-weight: 600;
-    margin: 1em 0;
+    margin: 1em 0 .5em 0;
 }
 
 footer ul li i, footer ul li a{
-    margin: .8em .3em;
+    margin: .5em .3em;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
