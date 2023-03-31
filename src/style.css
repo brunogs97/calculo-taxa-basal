@@ -180,3 +180,41 @@ footer ul li i, footer ul li a{
     text-decoration: none;
     color: var(--roxo);
 }
+
+@media (max-width: 500px) {
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 1em auto;
+    }
+
+    form {
+        font-size: 15px;
+    }
+
+    .cx-dados-paciente input {
+        font-size: 14px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    .cx-dados {
+        padding: .5em;
+        width: 90%;
+        height: 350px;
+        margin: 1em 0;
+    }
+
+    #resultado {
+        font-size: 14px;
+        padding: .5em;
+    }
+
+    footer ul li {
+        margin: 1em 0;
+    }
+}

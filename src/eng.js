@@ -11,20 +11,21 @@ btnCalcular.addEventListener('click', (event) => {
     cxRasultadoPaciente.style.display = 'block';
 
     const sexoPaciente = formulario.sexo.value
-    const pesoPaciente = formulario.peso.value
-    const alturaPaciente = formulario.altura.value
+    const pesoPaciente = Math.round((formulario.peso.value) / 2.205)
+    const alturaPaciente = Math.round((formulario.altura.value) * 2.54)
     const idadePaciente = formulario.idade.value
     const convertValorAltura = alturaPaciente / 100
     let sitIMCPaciente = (pesoPaciente / (convertValorAltura * convertValorAltura)).toFixed(1)
 
     //exibir o valor do IMC 
     valorIMCPaciente.value = sitIMCPaciente
-    let situacaoIMCPaciente = calcularIMC(sitIMCPaciente)
 
     let taxaBasal = calcularTaxaMetabolismoBasal(pesoPaciente, alturaPaciente, idadePaciente, sexoPaciente)
+    let situacaoIMCPaciente = calcularIMC(sitIMCPaciente)
+
 
     let multNivelAtividade = {
-        imc: situacaoIMCPaciente,
+        bmc: situacaoIMCPaciente,
         metabolBasal: taxaBasal[0],
         sedentario: taxaBasal[1],
         exerLight: taxaBasal[2],
@@ -37,7 +38,7 @@ btnCalcular.addEventListener('click', (event) => {
         perderPeso: taxaBasal[0] - 300,
     }
 
-    resultadoPaciente[0].textContent = multNivelAtividade.imc
+    resultadoPaciente[0].textContent = multNivelAtividade.bmc
     resultadoPaciente[1].textContent = multNivelAtividade.metabolBasal
     resultadoPaciente[2].textContent = multNivelAtividade.sedentario
     resultadoPaciente[3].textContent = multNivelAtividade.exerLight
@@ -52,17 +53,17 @@ function calcularIMC(imc) {
     let valorIMC = ''
 
     if (imc < 18.5) {
-        valorIMC += 'Abaixo do peso normal'
+        valorIMC += 'Underweight'
     } else if (imc >= 18.5 && imc < 25.9) {
-        valorIMC += 'Peso normal'
+        valorIMC += 'Normal.'
     } else if (imc >= 25 && imc < 29.9) {
-        valorIMC += 'Excesso de peso'
+        valorIMC += 'Overweight'
     } else if (imc >= 30 && imc < 34.9) {
-        valorIMC += 'Obesidade classe I'
+        valorIMC += 'Moderately Obese'
     } else if (imc >= 35 && imc < 39.9) {
-        valorIMC += 'Obesicade classe II'
+        valorIMC += 'Severely Obese'
     } else if (imc >= 40) {
-        valorIMC += 'Obesidade classe III'
+        valorIMC += 'Morbidly Obese'
     }
 
     return valorIMC

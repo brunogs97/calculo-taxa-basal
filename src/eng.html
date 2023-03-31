@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- opcoes de idiomas -->
     <nav>
         <ul class="lista">
             <li class="lista-item"><a href="../index.html" class="lista-item-link">PT</a></li>
@@ -23,14 +22,11 @@
         </ul>
     </nav>
 
-    <!-- cabecalho do projeto -->
     <header>
         <h1>Basal Metabolic Rate Calculator</h1>
     </header>
 
-    <!-- dados do paciente e resultado -->
     <main>
-        <!--entrada de dados do paciente-->
         <form class="cx-dados" id="formulario">
             <div class="cx-dados-paciente">
                 <label for="nome">NAME:</label>
@@ -45,11 +41,11 @@
             </div>
             <div class="cx-dados-paciente">
                 <label for="peso">WEIGHT(lbs):</label>
-                <input type="number" step="0.01" min="0" max="500" placeholder="75" id="peso" class="peso" required>
+                <input type="number" step="0.01" min="0" max="500" placeholder="160" id="peso" class="peso" required>
             </div>
             <div class="cx-dados-paciente">
                 <label for="altura">HEIGHT(inches):</label>
-                <input type="number" step="0.01" min="0" id="altura" class="altura" placeholder="170" required>
+                <input type="number" step="0.01" min="0" id="altura" class="altura" placeholder="70" required>
             </div>
             <div class="cx-dados-paciente">
                 <label for="peso">AGE(years):</label>
@@ -61,42 +57,44 @@
                 <input type="number" id="resutlado-imc" value="0.0" disabled>
             </div>
 
-            <!-- botoes -->
             <div class="botoes">
                 <button id="btn-calcular" type="submit">CALCULATE</button>
                 <button id="btn-limpar" type="reset">RESET</button>
             </div>
         </form>
 
-        <!--saida de dados do paciente-->
         <section class="cx-dados" id="resultado">
             <h2>YOUR RESULT:</h2>
             <ul>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="guia-informacao">Metabolismo Basal:<span class="valores-resultado"></span> cal</span>
+                    <span class="guia-informacao">BMI:<span class="valores-resultado"></span></span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="guia-informacao">BMC:<span class="valores-resultado"></span> kcal</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
                     <span class="guia-informacao">Sedentary:<span class="valores-resultado"></span>
-                        cal</span>
+                        kcal</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="guia-informacao">Lightly Active:<span class="valores-resultado"></span> cal</span>
+                    <span class="guia-informacao">Lightly Active:<span class="valores-resultado"></span> kcal</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="guia-informacao">Moderately Active:<span class="valores-resultado"></span> cal</span>
+                    <span class="guia-informacao">Moderately Active:<span class="valores-resultado"></span> kcal</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="guia-informacao">Very Active:<span class="valores-resultado"></span> cal</span>
+                    <span class="guia-informacao">Very Active:<span class="valores-resultado"></span> kcal</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
                     <span class="guia-informacao">Extremely Active:<span class="valores-resultado"></span>
-                        cal</span>
+                        kcal</span>
                 </li>
             </ul>
             <h3>GAIN WEIGHT:</h3>
@@ -105,7 +103,7 @@
                     <i class="fa-solid fa-arrow-right"></i>
                     <span class="guia-informacao">To gain weight you must consume:<span
                             class="valores-resultado"></span>
-                        cal</span><small> (daily)</small>
+                        kcal</span><small> (daily)</small>
                 </li>
             </ul>
             <h3>LOSE WEIGHT:</h3>
@@ -114,13 +112,12 @@
                     <i class="fa-solid fa-arrow-right"></i>
                     <span class="guia-informacao">To lose weight you must consume up to:<span
                             class="valores-resultado"></span>
-                        cal</span>
+                        kcal</span>
                 </li>
             </ul>
         </section>
     </main>
 
-    <!--rodapé-->
     <footer>
         <h3>REFERENCE:</h3>
         <ul>
@@ -137,7 +134,7 @@
         </ul>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="eng.js"></script>
 </body>
 
 </html>
